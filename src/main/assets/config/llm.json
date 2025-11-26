@@ -44,9 +44,10 @@
       "urlList": ["https://dashscope.aliyuncs.com/compatible-mode"],
       "path": "/v1/chat/completions",
       "name": "Qwen",
+      "apiKey": "sk-a5f209d824d54b6883fbc397f9fb4e28",
       "icon": "https://g.alicdn.com/qwenweb/qwen-ai-fe/0.0.19/favicon.ico",
-      "model": "qwen-turbo",
-      "modelList": ["qwen-turbo", "qwen-plus", "qwen-max"]
+      "model": "qwen-plus",
+      "modelList": ["qwen3-next-80b-a3b-instruct",""]
     },
     {
       "url": "https://api.deepseek.com",

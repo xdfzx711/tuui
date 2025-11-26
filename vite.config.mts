@@ -10,6 +10,7 @@ import { resolve, dirname } from 'path'
 import { builtinModules } from 'module'
 
 const isDevEnv = process.env.NODE_ENV === 'development'
+const isWebOnly = process.env.VITE_WEB_ONLY === 'true'
 
 export default defineConfig(({ mode }) => {
   process.env = {
@@ -90,8 +91,8 @@ export default defineConfig(({ mode }) => {
         autoImport: true
       }),
       // Docs: https://github.com/electron-vite/vite-plugin-electron
-      ElectronPlugin(electronPluginConfigs),
-      RendererPlugin()
+      !isWebOnly && ElectronPlugin(electronPluginConfigs),
+      !isWebOnly && RendererPlugin()
     ]
   }
 })

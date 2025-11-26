@@ -23,6 +23,7 @@
   },
   "scripts": {
     "dev": "vite",
+    "dev:web": "VITE_WEB_ONLY=true vite",
     "dev:debug": "vite -d",
     "dev:debug:force": "vite -d --force",
     "bump": "npm version patch --no-git-tag-version && (cd docs && npm version patch --no-git-tag-version)",
